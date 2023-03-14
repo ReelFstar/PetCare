@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>PetCare Connect</title>
+     <link rel="stylesheet" href="Pcx.css">
+     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+     <link rel="manifest" href="site.webmanifest">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.37),rgba(212, 218, 241, 0.521)),url("first-page.jpg");
+  min-height: 100%;
+}
+
+.pc-bar .pc-button {
+  padding: 16px;
+}
+
+
+
+
+/*Mb is my Modern Button */
+/*CSS For Mb*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*
+{
+     margin: 0;
+     padding:0;
+     box-sizing: border-box;
+     font-family: 'poppins',sans-serif;
+}
+.pc-make-a-request-btn-body
+{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     flex-direction: column;
+     gap: 60px;
+}
+.pc-make-a-request-btn-a
+{
+     position: relative;
+     background: #444; 
+     color: #fff;
+     text-decoration: none;
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+     font-size: 1em;
+     padding: 9px 30px;
+     transition: 0.5s;
+     margin-top: 450px;
+
+}
+
+.pc-make-a-request-btn-a:hover
+{
+     letter-spacing: 0.25em;
+     background:var(--clr) ;
+     color: var(--clr);
+     box-shadow: 0 0 35px var(--clr);
+}
+.pc-make-a-request-btn-a::before
+{
+     content: '';
+     position: absolute;
+     inset: 2px;
+     background: #27282c;
+}
+.pc-make-a-request-btn-a .pc-make-a-request-btn-span
+{
+     position: relative;
+     z-index: 1;
+}
+.pc-make-a-request-btn-a .pc-make-a-request-btn-i 
+{
+     position: absolute;
+     inset: 0;
+     display: block;
+}
+.pc-make-a-request-btn-a .pc-make-a-request-btn-i::before
+{
+     content: '';
+     position: absolute;
+     top: -3.5px;
+     left: 80%;
+     width: 10px;
+     height: 5px;
+     border: 2px solid var(--clr) ;
+     background: #27282c;
+     transform: translateX(-50%);
+     transition: 0.5s;
+}
+.pc-make-a-request-btn-a:hover .pc-make-a-request-btn-i::before
+{
+     width: 25px;
+     left: 40px;
+}
+.pc-make-a-request-btn-a .pc-make-a-request-btn-i::after
+{
+     content: '';
+     position: absolute;
+     bottom: -3.5px;
+     left: 20%;
+     width: 10px;
+     height: 5px;
+     border: 2px solid  var(--clr) ;
+     background: #27282c;
+     transform: translateX(-50%);
+     transition: 0.5s;
+}
+.pc-make-a-request-btn-a:hover .pc-make-a-request-btn-i::after
+{
+     width: 25px;
+     left: 205px;
+}
+
+/*End Of CSS For Mb*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.pc-dropdown2{
+            position: absolute;
+            display: inline-block;
+
+        }
+        .pc-dropdown_content2{
+            display: none;
+            position:absolute;
+            background-color: white;
+            min-width: 16px;
+            box-shadow: 0px 8px 20px 0px green;
+            padding: 12px 16px;
+            border-radius: 20px;
+
+
+        }
+        .pc-dropdown2:hover .pc-dropdown_content2{
+            display: block;
+        }
+        .pc-span2{
+            font-size:25px;
+        }
+*/
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="pc-top">
+  <div class="pc-bar pc-white pc-card" id="myNavbar">
+    <a href="#home" class="pc-bar-item pc-button pc-wide"><p><img src="logo.png" alt="Logo" ><span style="padding-left: 10px;"><b style="font-weight: bolder;">PetCare Connect</b></span></p></a>
+    <!-- Right-sided navbar links -->
+    <div class="pc-right pc-hide-small"style="height: 60px;">
+      <a href="#about" class="pc-bar-item pc-button">Mile Services</a>
+      <a href="#team" class="pc-bar-item pc-button"><i class="fa fa-user"></i> Pet Sitter</a>
+      <a href="#work" class="pc-bar-item pc-button"><i class="fa fa-th"></i> Services</a>
+      <a href="#contact" class="pc-bar-item pc-button"><i class="fa fa-sharp fa-regular fa-arrow-right-to-bracket"></i>Sign Up</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="pc-bar-item pc-button pc-right pc-hide-large pc-hide-medium" onclick="pc_open()"style="height: 60px;">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="pc-sidebar pc-bar-block pc-black pc-card pc-animate-left pc-hide-medium pc-hide-large" style="display:none" id="mySidebar"style="height: 60px;">
+  <a href="javascript:void(0)" onclick="pc_close()" class="pc-bar-item pc-button pc-large pc-padding-16">Close ×</a>
+  <a href="#about" onclick="pc_close()" class="pc-bar-item pc-button">Mile Services</a>
+  <a href="#team" onclick="pc_close()" class="pc-bar-item pc-button">Pet Sitter</a>
+  <a href="#work" onclick="pc_close()" class="pc-bar-item pc-button">Services</a>
+  <a href="#contact" onclick="pc_close()" class="pc-bar-item pc-button">Contact</a>
+  <a href="#contact" class="pc-bar-item pc-button">Sign Up</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 pc-display-container pc-grayscale-min" id="home">
+  <div class="pc-display-left pc-text-white" style="padding:46px">
+    <span class="pc-first-word pc-hide-small"><b> A Pet Is Never Truly Forgotten Until It Is No Longer Remembered ! </b></span><br>
+    <span class="pc-xxlarge pc-hide-large pc-hide-medium">A Pet Is Never Truly Forgotten Until It Is No Longer Remembered !</span><br>
+    <span class="pc-large">Get Pet Services For.</span><br>
+    <span class="pc-large">Dog Sitting, Walking, </span><br>
+    <span class="pc-large">Dog Home Boarding & Cat Sitting</span><br>
+    <span class="pc-large">Get the best care for your pets now at affordable price and at closer locations.</span>
+    <p><a href="#about" class="pc-button pc-white pc-padding-large pc-large pc-margin-top pc-opacity pc-hover-opacity-off">Make a request and start today</a></p>
+  </div> 
+  <div class="pc-display-bottomleft pc-text-grey pc-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official pc-hover-opacity"> </i>
+    <i class="fa fa-instagram pc-hover-opacity"> </i>
+    <i class="fa fa-snapchat pc-hover-opacity"> </i>
+    <i class="fa fa-pinterest-p pc-hover-opacity"> </i>
+    <i class="fa fa-twitter pc-hover-opacity"> </i>
+    <i class="fa fa-linkedin pc-hover-opacity"> </i>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="pc-make-a-request-btn-body">
+    <a href="#" style="--clr:#387fdb" class="pc-make-a-request-btn-a"><span class="pc-make-a-request-btn-span">Make A Request</span> <i class="pc-make-a-request-btn-i"> </i> </a>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="pc-container" style="padding:128px 16px" id="about">
+  <h3 class="pc-center">BEST SERVICES OFFERES</h3>
+  <p class="pc-center pc-large">Key features of PetCare Connect</p>
+  <div class="pc-row-padding pc-center" style="margin-top:64px">
+    <div class="pc-quarter">
+      <i class="fa fa-sharp fa-regular fa-street-view pc-margin-bottom pc-jumbo pc-center"></i>
+      <p class="pc-large">Mile Services</p>
+      <p>Still Thinking of what to Add Here</div>
+    <div class="pc-quarter">
+      <i class="fa fa-sharp fa-regular fa-dog-leashed pc-margin-bottom pc-jumbo"></i>
+      <p class="pc-large">Dog Walking</p>
+      <p>Still Thinking of what to Add Here</p>
+    </div>
+    <div class="pc-quarter">
+      <i class="fa fa-sharp fa-solid fa-heart pc-margin-bottom pc-jumbo"></i>
+      <p class="pc-large">Pet Grooming</p>
+      <p>Still Thinking of what to Add Here</p>
+    </div>
+    <div class="pc-quarter">
+      <i class="fa fa-solid fa-ellipsis pc-margin-bottom pc-jumbo"></i>
+      <p class="pc-large">More</p>
+      <p>Still Thinking of what to Add Here</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<!---
+<div class="pc-container pc-light-grey" style="padding:128px 16px">
+  <div class="pc-row-padding">
+    <div class="pc-col m6">
+      <h3>We know design.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <p><a href="#work" class="pc-button pc-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+    </div>
+    <div class="pc-col m6">
+      <img class="pc-image pc-round-large" src="/pcimages/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+-->
+<!-- Team Section --
+<div class="pc-container" style="padding:128px 16px" id="team">
+  <h3 class="pc-center">THE TEAM</h3>
+  <p class="pc-center pc-large">The ones who runs this company</p>
+  <div class="pc-row-padding pc-grayscale" style="margin-top:64px">
+    <div class="pc-col l3 m6 pc-margin-bottom">
+      <div class="pc-card">
+        <img src="/pcimages/team2.jpg" alt="John" style="width:100%">
+        <div class="pc-container">
+          <h3>John Doe</h3>
+          <p class="pc-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="pc-button pc-light-grey pc-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="pc-col l3 m6 pc-margin-bottom">
+      <div class="pc-card">
+        <img src="/pcimages/team1.jpg" alt="Jane" style="width:100%">
+        <div class="pc-container">
+          <h3>Anja Doe</h3>
+          <p class="pc-opacity">Art Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="pc-button pc-light-grey pc-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="pc-col l3 m6 pc-margin-bottom">
+      <div class="pc-card">
+        <img src="/pc/team3.jpg" alt="Mike" style="width:100%">
+        <div class="pc-container">
+          <h3>Mike Ross</h3>
+          <p class="pc-opacity">Web Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="pc-button pc-light-grey pc-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="pc-col l3 m6 pc-margin-bottom">
+      <div class="pc-card">
+        <img src="/pcimages/team4.jpg" alt="Dan" style="width:100%">
+        <div class="pc-container">
+          <h3>Dan Star</h3>
+          <p class="pc-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="pc-button pc-light-grey pc-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!-- Promo Section "Statistics" --
+<div class="pc-container pc-row pc-center pc-dark-grey pc-padding-64">
+  <div class="pc-quarter">
+    <span class="pc-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="pc-quarter">
+    <span class="pc-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="pc-quarter">
+    <span class="pc-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="pc-quarter">
+    <span class="pc-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div>
+-->
+<!-- Work Section --
+<div class="pc-container" style="padding:128px 16px" id="work">
+  <h3 class="pc-center">OUR WORK</h3>
+  <p class="pc-center pc-large">What we've done for people</p>
+
+  <div class="pc-row-padding" style="margin-top:64px">
+    <div class="pc-col l3 m6">pc
+      <img src="/pcimages/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A microphone">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A phone">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A drone">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="Soundbox">
+    </div>
+  </div>
+
+  <div class="pc-row-padding pc-section">
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A tablet">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A camera">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="pc-col l3 m6">
+      <img src="/pcimages/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="pc-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div>
+-->
+<!-- Modal for full size images on click--
+<div id="modal01" class="pc-modal pc-black" onclick="this.style.display='none'">
+  <span class="pc-button pc-xxlarge pc-black pc-padding-large pc-display-topright" title="Close Modal Image">×</span>
+  <div class="pc-modal-content pc-animate-zoom pc-center pc-transparent pc-padding-64">
+    <img id="img01" class="pc-image">
+    <p id="caption" class="pc-opacity pc-large"></p>
+  </div>
+</div>
+-->
+<!-- Skills Section --
+<div class="pc-container pc-light-grey pc-padding-64">
+  <div class="pc-row-padding">
+    <div class="pc-col m6">
+      <h3>Our Skills.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="pc-col m6">
+      <p class="pc-wide"><i class="fa fa-camera pc-margin-right"></i>Photography</p>
+      <div class="pc-grey">
+        <div class="pc-container pc-dark-grey pc-center" style="width:90%">90%</div>
+      </div>
+      <p class="pc-wide"><i class="fa fa-desktop pc-margin-right"></i>Web Design</p>
+      <div class="pc-grey">
+        <div class="pc-container pc-dark-grey pc-center" style="width:85%">85%</div>
+      </div>
+      <p class="pc-wide"><i class="fa fa-photo pc-margin-right"></i>Photoshop</p>
+      <div class="pc-grey">
+        <div class="pc-container pc-dark-grey pc-center" style="width:75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!-- Pricing Section --
+<div class="pc-container pc-center pc-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>PRICING</h3>
+  <p class="pc-large">Choose a pricing plan that fits your needs.</p>
+  <div class="pc-row-padding" style="margin-top:64px">
+    <div class="pc-third pc-section">
+      <ul class="pc-ul pc-white pc-hover-shadow">
+        <li class="pc-black pc-xlarge pc-padding-32">Basic</li>
+        <li class="pc-padding-16"><b>10GB</b> Storage</li>
+        <li class="pc-padding-16"><b>10</b> Emails</li>
+        <li class="pc-padding-16"><b>10</b> Domains</li>
+        <li class="pc-padding-16"><b>Endless</b> Support</li>
+        <li class="pc-padding-16">
+          <h2 class="pc-wide">$ 10</h2>
+          <span class="pc-opacity">per month</span>
+        </li>
+        <li class="pc-light-grey pc-padding-24">
+          <button class="pc-button pc-black pc-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="pc-third">
+      <ul class="pc-ul pc-white pc-hover-shadow">
+        <li class="pc-red pc-xlarge pc-padding-48">Pro</li>
+        <li class="pc-padding-16"><b>25GB</b> Storage</li>
+        <li class="pc-padding-16"><b>25</b> Emails</li>
+        <li class="pc-padding-16"><b>25</b> Domains</li>
+        <li class="pc-padding-16"><b>Endless</b> Support</li>
+        <li class="pc-padding-16">
+          <h2 class="pc-wide">$ 25</h2>
+          <span class="pc-opacity">per month</span>
+        </li>
+        <li class="pc-light-grey pc-padding-24">
+          <button class="pc-button pc-black pc-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="pc-third pc-section">
+      <ul class="pc-ul pc-white pc-hover-shadow">
+        <li class="pc-black pc-xlarge pc-padding-32">Premium</li>
+        <li class="pc-padding-16"><b>50GB</b> Storage</li>
+        <li class="pc-padding-16"><b>50</b> Emails</li>
+        <li class="pc-padding-16"><b>50</b> Domains</li>
+        <li class="pc-padding-16"><b>Endless</b> Support</li>
+        <li class="pc-padding-16">
+          <h2 class="pc-wide">$ 50</h2>
+          <span class="pc-opacity">per month</span>
+        </li>
+        <li class="pc-light-grey pc-padding-24">
+          <button class="pc-button pc-black pc-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+-->
+<!-- Contact Section --
+<div class="pc-container pc-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="pc-center">CONTACT</h3>
+  <p class="pc-center pc-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw pc-xxlarge pc-margin-right"></i> Chicago, US</p>
+    <p><i class="fa fa-phone fa-fw pc-xxlarge pc-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw pc-xxlarge pc-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="pc-input pc-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="pc-input pc-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="pc-input pc-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="pc-input pc-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="pc-button pc-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    -->
+    <!-- Image of location/map --
+    <img src="/pcimages/map.jpg" class="pc-image pc-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+-->
+<!-- Footer --
+<footer class="pc-center pc-black pc-padding-64">
+  <a href="#home" class="pc-button pc-light-grey"><i class="fa fa-arrow-up pc-margin-right"></i>To the top</a>
+  <div class="pc-xlarge pc-section">
+    <i class="fa fa-facebook-official pc-hover-opacity"></i>
+    <i class="fa fa-instagram pc-hover-opacity"></i>
+    <i class="fa fa-snapchat pc-hover-opacity"></i>
+    <i class="fa fa-pinterest-p pc-hover-opacity"></i>
+    <i class="fa fa-twitter pc-hover-opacity"></i>
+    <i class="fa fa-linkedin pc-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="#" title="Pcx.CSS" target="_blank" class="pc-hover-text-green">Pcx.css</a></p>
+</footer>
+ -->
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function pc_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
